@@ -10,9 +10,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <!-- CSS files -->
         <link rel="stylesheet" href="/assets/css/styles.css">
         <link rel="stylesheet" href="/assets/css/overlays.css">
         <link rel="stylesheet" href="/assets/css/configuration.css">
+        <link rel="stylesheet" href="/assets/css/game.css">
+        <!-- JavaScript files -->        
+        <script src="/assets/js/config.js" defer></script>
+        <script src="/assets/js/game.js" defer></script>
+        <script src="/assets/js/app.js" defer></script>
     </head>
     <body>
         <div id="backdrop"></div>
@@ -41,7 +47,7 @@
                             <h2>Player 1</h2>
                             <h3>PLAYER NAME</h3>
                             <p class="player-symbol">X</p>
-                            <button class="btn btn-alt">Edit</button>
+                            <button class="btn btn-alt" id="edit-player-1-btn">Edit</button>
                         </article>
                     </li>
                     <li>
@@ -49,29 +55,29 @@
                             <h2>Player 2</h2>
                             <h3>PLAYER NAME</h3>
                             <p class="player-symbol">O</p>
-                            <button class="btn btn-alt">Edit</button>
+                            <button class="btn btn-alt" id="edit-player-2-btn">Edit</button>
                         </article>
                     </li>
                 </ol>
                 <button class="btn">Start New Game</button>
             </section>
             <section id="active-game">
-                <article>
-                    <h3>You won <span id="winner-name">PLAYER NAME</span> !</h3>
+                <article id="game-over">
+                    <h2>You won, <span id="winner-name">PLAYER NAME</span> !</h2>
                     <p>Click "Start New Game" above, to start a new game!</p>
                 </article>
 
                 <p>It's your turn <span id="active-player-name">PLAYER NAME</span>!</p>
-                <ol>
+                <ol id="game-board">
+                    <li class="disable">X</li>
                     <li></li>
-                    <li></li>
-                    <li></li>
+                    <li class="disable">O</li>
 
                     <li></li>
-                    <li></li>
+                    <li class="disable">X</li>
                     <li></li>
 
-                    <li></li>
+                    <li class="disable">X</li>
                     <li></li>
                     <li></li>
                 </ol>
